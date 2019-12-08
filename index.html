@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simon Says</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+</head>
+<body>
+    <h1>Simon Says</h1>
+
+    <button class="modal-buttons" id="openmodal">About the Game</button>
+    <button class="modal-buttons" id="turnindicator">Simon is showing.</button>
+    <div class="modal" id="information">
+      <div class="modal-textbox">
+      <h1>About the Game</h1>
+      <p>Simon is a derivative of the popular children's game Simple Simon Says where a player would take the role of "Simon" and issue instructions to other players. The other players are tasked with repeating the same actions back in the correct order. The game has many international variants as well. </p>
+
+      <h1>The Rules</h1>
+      <p>In this game, there will be a 3 x 3 grid with a variety of colored buttons. Before each player turn, the buttons will flash in a particular order (buttons can flash multiple times as well). The player is tasked with repeating the sequence of flashes by pressing the buttons in the correct order. As the game continues the sequences become longer and more complicated. The game continues until the player can no longer successfully repeat the sequence.</p>
+      <div class="modal-footer">
+          <button class="modal-buttons" id="close">Let's Play!</button>
+      </div>
+    </div>
+    </div>
+
+    <div class="modal" id="gameover">
+        <div class="modal-textbox">
+        <h1>The Game Is Over.</h1>
+        <p id="finalscore"></p>
+        <p id="currenthighscore"></p>
+        <p id="simonseq"></p>
+        <p id="userseq"></p>
+        <p>Thanks for playing this game and supporting developers in training. If you'd like to play again, click the "Play Again" button below.</p>
+        <div class="modal-footer">
+            <button class="modal-buttons" id="closego">Play Again</button>
+        </div>
+      </div>
+    </div>
+
+<br>
+<br>
+<div class="scores">
+    <button class="score-buttons" id="highscore">High Score: 0</button>
+    <button class="score-buttons" id="currentscore">Current Score: 0</button>
+</div>
+
+<br>
+
+    <div id="gameboard">
+        <button class="gamebutton" id="one"></button>
+        <button class="gamebutton" id="two"></button>
+        <button class="gamebutton" id="three"></button>
+        <button class="gamebutton" id="four"></button>
+        <button class="gamebutton" id="five"></button>
+        <button class="gamebutton" id="six"></button>
+        <button class="gamebutton" id="seven"></button>
+        <button class="gamebutton" id="eight"></button>
+        <button class="gamebutton" id="nine"></button>
+    </div>
+
+    <br>
+    <button id="startgame">Start</button>
+    <button id="quitgame">Quit</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
