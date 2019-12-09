@@ -34,7 +34,7 @@ function closegoModal(evt) {
 
 
 //Variables For Game Buttons
-// const turnIndicator = document.querySelector("#turnindicator")
+const turnIndicator = document.querySelector("#turnindicator")
 const gbtns = document.querySelectorAll(".gamebutton")
 const quit = document.querySelector("#quitgame")
 const start = document.querySelector("#startgame")
@@ -51,19 +51,21 @@ for (i=0; i < gbtns.length; i++) {
     gbtns[i].addEventListener("click", user)
 }
 
+quit.addEventListener("click", quitGame)
+
+
 //Functions for Game Buttons
 function generatesimon() {
+
     while (simonsays.length < level)   {
         simonsays.push(buttons[Math.floor(Math.random() * 9)])
     }
-
-    console.log(simonsays)
 
     for (j = 0; j < simonsays.length; j++) {
         flashSimon(j)
     }
 
-    // turnIndicator.innerHTML = "Repeat What Simon Just Did"
+    turnIndicator.innerHTML = "Repeat What Simon Just Did"
 }
 
 function flashSimon(j) {
@@ -85,7 +87,18 @@ function user(evt) {
         usersays.push(evt.target.id)
 }
 
-
+function quitGame(evt) {
+    gameOver.style.display = 'block';
+    finalScore.innerHTML= "Your score for this game was: " + score
+    currHS.innerHTML= "Your current High Score: " + highScore
+    simonseq.innerHTML= "The final sequence was: " + simonsays.join(", ")
+    userseq.innerHTML= "You guessed: " + usersays.join(", ")
+    level = 1
+    score = 0
+    gameScore.innerHTML = "Current Score: " + score
+    gameHighScore.innerHTML = "Current Level: " + level
+    turnIndicator.innerHTML = "The game is over."
+}
 
 
 
@@ -113,11 +126,9 @@ function checkScore(evt) {
     if (usersays.length === simonsays.length) {
         
         if (checkArrays() === true) {
-            console.log("checkarrays is true")
             score += level
 
             if (score > highScore) {
-                console.log("score is higher than highscore")
                 highScore = score
             }
 
@@ -125,7 +136,7 @@ function checkScore(evt) {
 
             gameScore.innerHTML = "Current Score: " + score
             gameHighScore.innerHTML = "High Score: " + highScore
-            gameHighScore.innerHTML = "Current Level: " + level
+            currlevel.innerHTML = "Current Level: " + level
 
             usersays=[]
             generatesimon()
@@ -140,6 +151,7 @@ function checkScore(evt) {
             score = 0
             gameScore.innerHTML = "Current Score: " + score
             gameHighScore.innerHTML = "Current Level: " + level
+            turnIndicator.innerHTML = "The game is over."
         }
     }
 }
