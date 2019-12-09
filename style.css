@@ -1,16 +1,18 @@
+/* colors : #c33c54 (BRICK RED) #ffb400 (UCLA GOLD) #00a6ed (VIVID CERULEAN) #7fb800 (APPLE GREEN) #0d2c54 (PRUSSIAN BLUE) */
+
 h1 {
 	padding: 15px;
     text-align: center;
     max-width: 500px;
     margin: auto;
+    font-family: 'Overpass', sans-serif;
+    color: #ffb400;
 }
 
 body {
-
-}
-
-hr {
-    border: 2px solid black;
+    color:white;
+    background: #0d2c54;
+    font-family: 'Raleway', sans-serif;
 }
 
 .modal {
@@ -26,12 +28,12 @@ hr {
 }
 
 .modal-textbox {
-	background-color: white;
+	background-color: #2f2f2f;
 	height: 450px;
 	width: 550px;
 	border-radius: 2px;
 	margin: 150px auto;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
 	padding: 2%;
 	line-height: 120%;
 }
@@ -41,6 +43,17 @@ hr {
 }
 
 .modal-buttons {
+	padding: 14px 18px;
+	background-color: #c33c54;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+    font-family: Arial;
+	cursor: pointer;
+}
+
+#turnindicator {
 	padding: 14px 18px;
 	background-color: black;
 	border: none;
@@ -55,52 +68,25 @@ hr {
     display: block;
     margin: auto;
     padding: 14px 18px;
-	background-color: black;
+	background-color: #00a6ed;
 	border-radius: 3px;
 	color: white;
     font-family: Arial;
     cursor: default;
 }
 
-.gameboard {
-
-}
-
 .gamebutton {
     min-width: 200px;
     min-height: 200px;
-    margin: 3px 3px;
-    border: 1px solid transparent;    
-    -webkit-transition: border 0.1s linear, box-shadow 0.1s linear;
-    transition: border 0.1s linear, box-shadow 0.1s linear;
-}
-    
-#myGlower.active {
-    border-color: black;
-    -webkit-box-shadow: 0 0 5px black;
-    -moz-box-shadow: 0 0 5px black;
-    box-shadow: 0 0 5px black;
-}
-
-.bluetext {
-    color: #090C9B;
-}
-
-.redtext {
-    color: #F71735;
-}
-
-.greentext {
-    color: #086788;
-}
-
-#information {
-	display: none;
+    margin: 5px 5px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 #gameboard {
-    max-width: 615px;
-    max-height:615px;
+    max-width: 630px;
+    max-height:630px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -120,27 +106,27 @@ hr {
 }
 
 #quitgame {
-    display: block;
+    display: inline-block;
     margin: auto;
     padding: 14px 18px;
-	background-color: #F0C808;
+	background-color: #c33c54;
 	border: none;
 	outline: none;
 	border-radius: 3px;
-	color: black;
+	color: white;
     font-family: Arial;
 	cursor: pointer;
 }
 
 #startgame {
-    display: block;
+    display: inline-block;
     margin: auto;
     padding: 14px 18px;
-	background-color: #F0C808;
+	background-color: #c33c54;
 	border: none;
 	outline: none;
 	border-radius: 3px;
-	color: black;
+	color: white;
     font-family: Arial;
 	cursor: pointer;
 }
@@ -151,19 +137,19 @@ hr {
 }
 
 #two {
-    background: gold;
-}
-
-#three {
     background: purple;
 }
 
+#three {
+    background: gold;
+}
+
 #four {
-    background: blue;
+    background: slategray;
 }
 
 #five {
-    background: violet;
+    background: orange;
 }
 
 #six {
@@ -171,15 +157,15 @@ hr {
 }
 
 #seven {
-    background: #6f4e37;
+    background: blue;
 }
 
 #eight {
-    background: maroon;
+    background: violet;
 }
 
 #nine {
-    background: orange;
+    background: maroon;
 }
 
 #turnIndicator {
@@ -192,4 +178,15 @@ hr {
 
 .full {
     opacity: 1
+}
+
+.startquit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scores {
+    display: flex;
+    justify-content: center;
 }

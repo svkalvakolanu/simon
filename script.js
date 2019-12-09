@@ -45,16 +45,34 @@ let simonsays = []
 let usersays = []
 
 //Event Listeners for Game Buttons
+start.addEventListener("click", reset)
 start.addEventListener("click", generatesimon)
 
 for (i=0; i < gbtns.length; i++) {
     gbtns[i].addEventListener("click", user)
 }
 
+// for (i=0; i < gbtns.length; i++) {
+//     gbtns[i].addEventListener("mouseover", hoverState)
+// }
+
+// for (i=0; i < gbtns.length; i++) {
+//     gbtns[i].addEventListener("mouseout", undohoverState)
+// }
+
 quit.addEventListener("click", quitGame)
 
 
 //Functions for Game Buttons
+function reset() {
+    level = 1
+    score = 0
+    gameScore.innerHTML = "Current Score: " + score
+    currlevel.innerHTML = "Current Level: " + level
+    usersays = []
+    simonsays=[]
+}
+
 function generatesimon() {
 
     while (simonsays.length < level)   {
@@ -65,7 +83,7 @@ function generatesimon() {
         flashSimon(j)
     }
 
-    turnIndicator.innerHTML = "Repeat What Simon Just Did"
+    turnIndicator.innerHTML = "A game is in progress."
 }
 
 function flashSimon(j) {
@@ -85,6 +103,10 @@ function flashSimon(j) {
 
 function user(evt) {
         usersays.push(evt.target.id)
+        evt.target.style.border = "10px solid black"
+        setTimeout(() => {
+            evt.target.style.border = "none"
+        }, 500)
 }
 
 function quitGame(evt) {
@@ -96,19 +118,25 @@ function quitGame(evt) {
     level = 1
     score = 0
     gameScore.innerHTML = "Current Score: " + score
-    gameHighScore.innerHTML = "Current Level: " + level
+    currlevel.innerHTML = "Current Level: " + level
     turnIndicator.innerHTML = "The game is over."
+    usersays = []
+    simonsays=[]
 }
 
+function hoverState(evt) {
+    evt.target.style.opacity = .5
+}
 
-
+function undohoverState(evt) {
+    evt.target.style.opacity = 1
+}
 
 
 
 //Variables for Win States
 const gameOver = document.querySelector("#gameover")
 const finalScore = document.querySelector("#finalscore")
-const currHS = document.querySelector("#currenthighscore")
 const simonseq = document.querySelector("#simonseq")
 const userseq = document.querySelector("#userseq")
 const gameScore = document.querySelector("#currentscore")
@@ -139,19 +167,23 @@ function checkScore(evt) {
             currlevel.innerHTML = "Current Level: " + level
 
             usersays=[]
-            generatesimon()
+            setTimeout(() => {
+                generatesimon()
+            }, 1000)
             
         } else if (checkArrays() === false) {
             gameOver.style.display = 'block';
             finalScore.innerHTML= "Your score for this game was: " + score
-            currHS.innerHTML= "Your current High Score: " + highScore
+            gameHighScore.innerHTML = "High Score: " + highScore
             simonseq.innerHTML= "The final sequence was: " + simonsays.join(", ")
             userseq.innerHTML= "You guessed: " + usersays.join(", ")
             level = 1
             score = 0
             gameScore.innerHTML = "Current Score: " + score
-            gameHighScore.innerHTML = "Current Level: " + level
+            currlevel.innerHTML = "Current Level: " + level
             turnIndicator.innerHTML = "The game is over."
+            usersays = []
+            simonsays=[]
         }
     }
 }
