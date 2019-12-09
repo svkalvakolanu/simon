@@ -52,13 +52,13 @@ for (i=0; i < gbtns.length; i++) {
     gbtns[i].addEventListener("click", user)
 }
 
-// for (i=0; i < gbtns.length; i++) {
-//     gbtns[i].addEventListener("mouseover", hoverState)
-// }
+for (i=0; i < gbtns.length; i++) {
+    gbtns[i].addEventListener("mouseover", hoverState)
+}
 
-// for (i=0; i < gbtns.length; i++) {
-//     gbtns[i].addEventListener("mouseout", undohoverState)
-// }
+for (i=0; i < gbtns.length; i++) {
+    gbtns[i].addEventListener("mouseout", undohoverState)
+}
 
 quit.addEventListener("click", quitGame)
 
@@ -125,7 +125,7 @@ function quitGame(evt) {
 }
 
 function hoverState(evt) {
-    evt.target.style.opacity = .5
+    evt.target.style.opacity = .75
 }
 
 function undohoverState(evt) {

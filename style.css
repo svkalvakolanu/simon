@@ -9,6 +9,15 @@ h1 {
     color: #ffb400;
 }
 
+h2 {
+        padding: 15px;
+        text-align: center;
+        max-width: 500px;
+        margin: auto;
+        font-family: 'Overpass', sans-serif;
+        color: #7fb800;
+}
+
 body {
     color:white;
     background: #0d2c54;
@@ -49,7 +58,7 @@ body {
 	outline: none;
 	border-radius: 3px;
 	color: white;
-    font-family: Arial;
+    font-family: Raleway;
 	cursor: pointer;
 }
 
@@ -60,7 +69,7 @@ body {
 	outline: none;
 	border-radius: 3px;
 	color: white;
-    font-family: Arial;
+    font-family: Raleway;
 	cursor: pointer;
 }
 
@@ -71,13 +80,15 @@ body {
 	background-color: #00a6ed;
 	border-radius: 3px;
 	color: white;
-    font-family: Arial;
+    font-family: Raleway;
     cursor: default;
 }
 
 .gamebutton {
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 10px;
+    min-height: 10px;
+    height: 175px;
+    height: 175px;
     margin: 5px 5px;
     border: 1px solid transparent;
     font-size: 14px;
@@ -114,7 +125,7 @@ body {
 	outline: none;
 	border-radius: 3px;
 	color: white;
-    font-family: Arial;
+    font-family: Raleway;
 	cursor: pointer;
 }
 
@@ -127,7 +138,7 @@ body {
 	outline: none;
 	border-radius: 3px;
 	color: white;
-    font-family: Arial;
+    font-family: Raleway;
 	cursor: pointer;
 }
 
@@ -137,11 +148,11 @@ body {
 }
 
 #two {
-    background: purple;
+    background: hotpink;
 }
 
 #three {
-    background: gold;
+    background: purple;
 }
 
 #four {
@@ -149,11 +160,11 @@ body {
 }
 
 #five {
-    background: orange;
+    background: green;
 }
 
 #six {
-    background: green;
+    background: darkorange;
 }
 
 #seven {
@@ -186,7 +197,32 @@ body {
     align-items: center;
 }
 
+#reactiongame {
+    display: block;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
 .scores {
     display: flex;
     justify-content: center;
+}
+
+.redirect {
+    display: block;
+    margin: auto;
+    text-align: center;
+    max-width: 90px;
+    padding: 14px 10px;
+	background-color: #c33c54;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+    font-family: Raleway;
+    font-size: 11px;
+	cursor: pointer;
 }
