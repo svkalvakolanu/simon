@@ -34,35 +34,51 @@ function closegoModal(evt) {
 
 
 //Variables For Game Buttons
-const turnIndicator = document.querySelector("#turnindicator")
+// const turnIndicator = document.querySelector("#turnindicator")
 const gbtns = document.querySelectorAll(".gamebutton")
 const quit = document.querySelector("#quitgame")
 const start = document.querySelector("#startgame")
 const gameboard = document.querySelector("#gameboard")
-let count = document.querySelectorAll(".active").length
 let buttons = ["one","two","three","four","five","six","seven","eight","nine"]
-let level = 2
+let level = 1
 let simonsays = []
 let usersays = []
 
-
 //Event Listeners for Game Buttons
-// for (i=0; i < gbtns.length; i++) {
-//     gbtns[i].addEventListener("click", simon)
-// }
-
-turnIndicator.addEventListener("click", simon)
+start.addEventListener("click", generatesimon)
 
 for (i=0; i < gbtns.length; i++) {
     gbtns[i].addEventListener("click", user)
 }
 
 //Functions for Game Buttons
-function simon(evt) {
-    for (i=0; i < level; i++) {
+function generatesimon() {
+    while (simonsays.length < level)   {
         simonsays.push(buttons[Math.floor(Math.random() * 9)])
     }
+
     console.log(simonsays)
+
+    for (j = 0; j < simonsays.length; j++) {
+        flashSimon(j)
+    }
+
+    // turnIndicator.innerHTML = "Repeat What Simon Just Did"
+}
+
+function flashSimon(j) {
+    setTimeout(function() {
+        let flashing = gbtns[buttons.indexOf(simonsays[j])]
+            
+        setTimeout(() => {
+                flashing.classList.add("opacity")
+            }, 200)
+
+            setTimeout(() => {
+                flashing.classList.remove("opacity")
+            }, 1000)
+
+    }, 1000 * j)
 }
 
 function user(evt) {
@@ -70,38 +86,7 @@ function user(evt) {
 }
 
 
-function clearBoard(evt) {
 
-}
-
-
-
-
-
-//Variables for Turn Indicator
-// const turnIndicator = document.querySelector("#turnindicator")
-
-//Event Listeners for Turn Indicator
-gameboard.addEventListener("click",  flipindicator)
-
-//Function for Turn Indicator
-function flipindicator(evt) {
-    evt.preventDefault()
-    if (count === 0 || count === 2 || count === 4 || count === 6 || count === 8) {
-        turnIndicator.classList.remove("selectRed")
-        turnIndicator.classList.add("selectBlue")
-        turnIndicator.innerHTML = "Player 1's Turn"
-        count = document.querySelectorAll(".active").length
-    } else if (count === 1 || count === 3 || count === 5 || count === 7) {
-        turnIndicator.classList.remove("selectBlue")
-        turnIndicator.classList.add("selectRed")
-        turnIndicator.innerHTML = "Player 2's Turn"
-        count = document.querySelectorAll(".active").length
-    } else if (count === 9) {
-        turnIndicator.classList.remove("selectBlue")
-        turnIndicator.innerHTML = "The Game is Over"
-    }
-}
 
 
 
@@ -115,6 +100,7 @@ const simonseq = document.querySelector("#simonseq")
 const userseq = document.querySelector("#userseq")
 const gameScore = document.querySelector("#currentscore")
 const gameHighScore = document.querySelector("#highscore")
+const currlevel = document.querySelector("#currentlevel")
 let counter = 0
 let score = 0
 let highScore = 0
@@ -124,20 +110,26 @@ gameboard.addEventListener("click", checkScore)
 
 //Function for Win States
 function checkScore(evt) {
-    if (usersays.length === level) {
+    if (usersays.length === simonsays.length) {
+        
         if (checkArrays() === true) {
-            console.log(score)
-            score =+ level
+            console.log("checkarrays is true")
+            score += level
+
             if (score > highScore) {
+                console.log("score is higher than highscore")
                 highScore = score
             }
-            console.log(score)
+
+            level += 1
+
             gameScore.innerHTML = "Current Score: " + score
             gameHighScore.innerHTML = "High Score: " + highScore
-            level += 1
-            console.log(level)
-            simonsays=[]
+            gameHighScore.innerHTML = "Current Level: " + level
+
             usersays=[]
+            generatesimon()
+            
         } else if (checkArrays() === false) {
             gameOver.style.display = 'block';
             finalScore.innerHTML= "Your score for this game was: " + score
@@ -145,6 +137,9 @@ function checkScore(evt) {
             simonseq.innerHTML= "The final sequence was: " + simonsays.join(", ")
             userseq.innerHTML= "You guessed: " + usersays.join(", ")
             level = 1
+            score = 0
+            gameScore.innerHTML = "Current Score: " + score
+            gameHighScore.innerHTML = "Current Level: " + level
         }
     }
 }
@@ -152,20 +147,19 @@ function checkScore(evt) {
 function checkArrays() {
     counter = 0
     for (i = 0; i < simonsays.length; i++) {
-        for (j=0; j < usersays.length; j++) {
-            if (simonsays[i] === usersays[j]) {
-                counter += 1
-            }
+        if (simonsays[i] === usersays[i]) {
+            counter += 1
         }
     }
-console.log(level)
-console.log(counter)
-
     if (counter === level) {
-        console.log(true)
         return true
     } else {
-        console.log(false)
         return false
     }
 }
+
+
+
+
+
+

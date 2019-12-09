@@ -59,7 +59,7 @@ hr {
 	border-radius: 3px;
 	color: white;
     font-family: Arial;
-    cursor: pointer;
+    cursor: default;
 }
 
 .gameboard {
@@ -151,7 +151,7 @@ hr {
 }
 
 #two {
-    background: yellow;
+    background: gold;
 }
 
 #three {
@@ -163,7 +163,7 @@ hr {
 }
 
 #five {
-    background: lightblue;
+    background: violet;
 }
 
 #six {
@@ -175,7 +175,7 @@ hr {
 }
 
 #eight {
-    background: pink;
+    background: maroon;
 }
 
 #nine {
@@ -186,10 +186,10 @@ hr {
     float: right;
 }
 
-.button {
-    transition: opacity 0.5s ease-in-out;
-    width: 100%;
-    height: 50vh;
-    border: solid 3px black;
-    cursor: pointer;
+.opacity {
+    opacity: .5;
   }
+
+.full {
+    opacity: 1
+}
