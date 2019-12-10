@@ -17,7 +17,7 @@ Please give me feedback so I can fine tune the game: https://forms.gle/AQkp4BuLv
 # Credits
 Shout out General Assembly for teaching me this stuff.
 
-Shout out Joe, Ali, Carlos, Kenny and Nathan for helping
+Shout out Joe, Ali, Carlos, Kenny and Nathan for helping.
 
 
 -- A SVK Snip
