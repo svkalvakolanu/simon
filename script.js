@@ -124,13 +124,13 @@ function quitGame(evt) {
     simonsays=[]
 }
 
-function hoverState(evt) {
-    evt.target.style.opacity = .75
-}
+// function hoverState(evt) {
+//     evt.target.style.opacity = .75
+// }
 
-function undohoverState(evt) {
-    evt.target.style.opacity = 1
-}
+// function undohoverState(evt) {
+//     evt.target.style.opacity = 1
+// }
 
 
 
