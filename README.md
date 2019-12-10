@@ -15,7 +15,8 @@ In this game, there will be a 3 x 3 grid with a variety of colored buttons. Befo
 Please give me feedback so I can fine tune the game: https://forms.gle/AQkp4BuLvUkLD2qV6 
 
 # Credits
-Shout out General Assembly for teaching me this stuff
+Shout out General Assembly for teaching me this stuff.
+
 Shout out Joe, Ali, Carlos, Kenny and Nathan for helping
 
 
