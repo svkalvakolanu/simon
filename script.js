@@ -52,16 +52,15 @@ for (i=0; i < gbtns.length; i++) {
     gbtns[i].addEventListener("click", user)
 }
 
-for (i=0; i < gbtns.length; i++) {
-    gbtns[i].addEventListener("mouseover", hoverState)
-}
-
-for (i=0; i < gbtns.length; i++) {
-    gbtns[i].addEventListener("mouseout", undohoverState)
-}
-
 quit.addEventListener("click", quitGame)
 
+// for (i=0; i < gbtns.length; i++) {
+//     gbtns[i].addEventListener("mouseover", hoverState)
+// }
+
+// for (i=0; i < gbtns.length; i++) {
+//     gbtns[i].addEventListener("mouseout", undohoverState)
+// }
 
 //Functions for Game Buttons
 function reset() {
@@ -94,9 +93,9 @@ function flashSimon(j) {
                 flashing.classList.add("opacity")
             }, 200)
 
-            setTimeout(() => {
+        setTimeout(() => {
                 flashing.classList.remove("opacity")
-            }, 1000)
+        }, 1000)
 
     }, 1000 * j)
 }
@@ -115,11 +114,14 @@ function quitGame(evt) {
     currHS.innerHTML= "Your current High Score: " + highScore
     simonseq.innerHTML= "The final sequence was: " + simonsays.join(", ")
     userseq.innerHTML= "You guessed: " + usersays.join(", ")
+
     level = 1
     score = 0
+
     gameScore.innerHTML = "Current Score: " + score
     currlevel.innerHTML = "Current Level: " + level
     turnIndicator.innerHTML = "The game is over."
+    
     usersays = []
     simonsays=[]
 }
