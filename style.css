@@ -18,7 +18,8 @@ h2 {
     color: #7fb800;
 }
 
-body {
+ html, body {
+    height: 97vh;
     color:white;
     background: #0d2c54;
     font-family: 'Raleway', sans-serif;
@@ -88,8 +89,7 @@ body {
 .gamebutton {
     min-width: 10px;
     min-height: 10px;
-    height: 175px;
-    height: 175px;
+    /* height: 175px; */
     margin: 5px 5px;
     border: 1px solid transparent;
     font-size: 14px;
@@ -97,9 +97,10 @@ body {
 }
 
 #gameboard {
+    min-height: 50%;
     max-width: 630px;
     max-height:630px;
-    margin: auto;
+    margin: 15px auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -227,3 +228,9 @@ a {
     font-size: 11px;
 	cursor: pointer;
 }
+
+.dropdown {
+    position: relative;
+    display: block;
+    float: right;
+  }
