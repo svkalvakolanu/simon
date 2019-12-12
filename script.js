@@ -33,6 +33,7 @@ function closegoModal(evt) {
 
 
 
+
 //Variables For Game Buttons
 const turnIndicator = document.querySelector("#turnindicator")
 const gbtns = document.querySelectorAll(".gamebutton")
@@ -53,14 +54,6 @@ for (i=0; i < gbtns.length; i++) {
 }
 
 quit.addEventListener("click", quitGame)
-
-// for (i=0; i < gbtns.length; i++) {
-//     gbtns[i].addEventListener("mouseover", hoverState)
-// }
-
-// for (i=0; i < gbtns.length; i++) {
-//     gbtns[i].addEventListener("mouseout", undohoverState)
-// }
 
 //Functions for Game Buttons
 function reset() {
@@ -103,6 +96,7 @@ function flashSimon(j) {
 function user(evt) {
         usersays.push(evt.target.id)
         evt.target.style.border = "10px solid black"
+
         setTimeout(() => {
             evt.target.style.border = "none"
         }, 500)
@@ -126,13 +120,7 @@ function quitGame(evt) {
     simonsays=[]
 }
 
-// function hoverState(evt) {
-//     evt.target.style.opacity = .75
-// }
 
-// function undohoverState(evt) {
-//     evt.target.style.opacity = 1
-// }
 
 
 
@@ -174,7 +162,7 @@ function checkScore(evt) {
             }, 1000)
             
         } else if (checkArrays() === false) {
-            gameOver.style.display = 'block';
+            gameOver.style.display = 'block'
             finalScore.innerHTML= "Your score for this game was: " + score
             gameHighScore.innerHTML = "High Score: " + highScore
             simonseq.innerHTML= "The final sequence was: " + simonsays.join(", ")
@@ -192,11 +180,13 @@ function checkScore(evt) {
 
 function checkArrays() {
     counter = 0
+
     for (i = 0; i < simonsays.length; i++) {
         if (simonsays[i] === usersays[i]) {
             counter += 1
         }
     }
+
     if (counter === level) {
         return true
     } else {

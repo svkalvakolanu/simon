@@ -5,44 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Simon</title>
+
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <h1>Simon</h1>
 
     <button class="modal-buttons" id="openmodal">About the Game</button>
     <button class="modal-buttons" id="turnindicator">Start A New Game</button>
+
     <div class="modal" id="information">
       <div class="modal-textbox">
-      <h1>About the Game</h1>
-      <p>Simon is an electronic game of memory skill invented by Ralph H. Baer and Howard J. Morrison. The device creates a series of tones and lights and requires a user to repeat the sequence. If the user succeeds, the series becomes progressively longer and more complex. Once the user fails or the time limit runs out, the game is over. The original version was manufactured and distributed by Milton Bradley in 1978 and later by Hasbro after it took over Milton Bradley.  </p>
+        <h1>About the Game</h1>
+        <p>Simon is an electronic game of memory skill invented by Ralph H. Baer and Howard J. Morrison. The device creates a series of tones and lights and requires a user to repeat the sequence. If the user succeeds, the series becomes progressively longer and more complex. Once the user fails or the time limit runs out, the game is over. The original version was manufactured and distributed by Milton Bradley in 1978 and later by Hasbro after it took over Milton Bradley.  </p>
 
-      <h1>The Rules</h1>
-      <p>In this game, there will be a 3 x 3 grid with a variety of colored buttons. Before each player turn, the buttons will flash in a particular order (buttons can flash multiple times as well). The player is tasked with repeating the sequence of flashes by pressing the buttons in the correct order. As the game continues the sequences become longer and more complicated. The game continues until the player can no longer successfully repeat the sequence.</p>
-      <div class="modal-footer">
+        <h1>The Rules</h1>
+        <p>In this game, there will be a 3 x 3 grid with a variety of colored buttons. Before each player turn, the buttons will flash in a particular order (buttons can flash multiple times as well). The player is tasked with repeating the sequence of flashes by pressing the buttons in the correct order. As the game continues the sequences become longer and more complicated. The game continues until the player can no longer successfully repeat the sequence.</p>
+        
+        <div class="modal-footer">
           <button class="modal-buttons" id="close">Let's Play!</button>
-      </div>
-    </div>
+        </div>
+
+       </div>
     </div>
 
     <div class="modal" id="gameover">
         <div class="modal-textbox">
-        <h1>The Game Is Over.</h1>
-        <p id="finalscore"></p>
-        <p id="currenthighscore"></p>
-        <p id="simonseq"></p>
-        <p id="userseq"></p>
-        <p>Thanks for playing this game and supporting developers in training. If you'd like to play again, click the "Play Again" button below.</p>
-        <div class="modal-footer">
-            <button class="modal-buttons" id="closego">Close</button>
+            <h1>The Game Is Over.</h1>
+            <p id="finalscore"></p>
+            <p id="currenthighscore"></p>
+            <p id="simonseq"></p>
+            <p id="userseq"></p>
+            <p>Thanks for playing this game and supporting developers in training. If you'd like to play again, click the "Play Again" button below.</p>
+        
+            <div class="modal-footer">
+                <button class="modal-buttons" id="closego">Close</button>
+            </div>
+
         </div>
-      </div>
     </div>
 
 <br>
 <br>
+
 <div class="startquit">
     <button id="startgame">Start</button>
     <button id="quitgame">Quit</button>
@@ -63,6 +71,7 @@
     </div>
 
     <br>
+
     <div class="scores">
         <button class="score-buttons" id="highscore">High Score: 0</button>
         <button class="score-buttons" id="currentscore">Current Score: 0</button>
@@ -71,6 +80,7 @@
 
 
     <br>
+    
     <h2>Projects in Development:</h2>
     <a class="redirect" href="svkalvakolanu.github.io/beatmachine">Beat Machine</a>
 

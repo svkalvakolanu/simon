@@ -10,12 +10,12 @@ h1 {
 }
 
 h2 {
-        padding: 15px;
-        text-align: center;
-        max-width: 500px;
-        margin: auto;
-        font-family: 'Overpass', sans-serif;
-        color: #7fb800;
+    padding: 15px;
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    font-family: 'Overpass', sans-serif;
+    color: #7fb800;
 }
 
 body {
@@ -189,7 +189,7 @@ body {
   }
 
 .full {
-    opacity: 1
+    opacity: 1;
 }
 
 .startquit {
