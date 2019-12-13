@@ -1,36 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Reaction Time Test</title>
-    <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="reactionstyles.css">
-
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Overpass&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="reactionstyles.css" />
+  </head>
+  <body>
     <h1>Reaction Time Test</h1>
 
     <button class="modal-buttons" id="openmodal">About the Game</button>
 
+    <hr />
 
     <div class="startquit">
-            <button id="startgame">Start</button>
-            <button id="quitgame">Quit</button>
+      <button id="startgame">Start</button>
+      <button id="quitgame">Quit</button>
     </div>
-        
+
     <div class="modal" id="information">
       <div class="modal-textbox">
         <h1>About the Game</h1>
-        <p>Two simon spin-off games that can help train your spatial awareness and reaction time. </p>
+        <p>
+          Two simon spin-off games that can help train your spatial awareness
+          and reaction time.
+        </p>
 
         <h1>The Rules</h1>
-        <p>In the reaction time game, a button will flash after a random interval and the goal is to click the button as quickly as possible after the flash occurs.</p>
-        <p>In the spatial awareness game, a sector of the board will flash quickly and the goal is to click the sector that flashed. There are no borders in the game, so you have to be very accurate.</p>
+        <p>
+          In the reaction time game, a button will flash after a random interval
+          and the goal is to click the button as quickly as possible after the
+          flash occurs.
+        </p>
+        <p>
+          In the spatial awareness game, a sector of the board will flash
+          quickly and the goal is to click the sector that flashed. There are no
+          borders in the game, so you have to be very accurate.
+        </p>
 
-        <p>Choose your game in the top right corner and then press start to begin the game!</p>
+        <p>
+          Choose your game in the top right corner and then press start to begin
+          the game!
+        </p>
 
         <div class="modal-footer">
           <button class="modal-buttons" id="close">Let's Play!</button>
@@ -38,36 +58,36 @@
       </div>
     </div>
 
-
     <div class="modal" id="gameover">
-            <div class="modal-textbox">
-                <h1>The Game Is Over.</h1>
-                <p id="rtime"></p>
-                <p>Thanks for playing this game and supporting developers in training. If you'd like to play again, click the "Play Again" button below.</p>
-            
-                <div class="modal-footer">
-                    <button class="modal-buttons" id="closego">Close</button>
-                </div>
-            </div>
+      <div class="modal-textbox">
+        <h1>The Game Is Over.</h1>
+        <p id="rtime"></p>
+        <p>
+          Thanks for playing this game and supporting developers in training. If
+          you'd like to play again, click the "Play Again" button below.
+        </p>
+
+        <div class="modal-footer">
+          <button class="modal-buttons" id="closego">Close</button>
+        </div>
+      </div>
     </div>
 
     <div id="gameboard">
-        <button class="gamebutton" id="one"></button>
+      <button class="gamebutton" id="one"></button>
     </div>
 
     <div class="scores">
-            <button class="score-buttons" id="reactHS">Best Time: -</button>
-            <button class="score-buttons" id="lastscore">Last Time: -</button>
+      <button class="score-buttons" id="reactHS">Best Time: -</button>
+      <button class="score-buttons" id="lastscore">Last Time: -</button>
     </div>
-    
-    
+
     <h2>Other Projects</h2>
     <a class="redirect" href="../index.html">Simon Classic</a>
-    <a class="redirect" href="../awarenessgame/awareness.html">Spatial Awareness</a>
-
-
-    
+    <a class="redirect" href="../awarenessgame/awareness.html"
+      >Spatial Awareness</a
+    >
 
     <script src="reactionscript.js"></script>
-</body>
+  </body>
 </html>
