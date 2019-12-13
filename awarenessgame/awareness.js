@@ -1,6 +1,6 @@
 //recall local-storage
 if (localStorage.getItem("awhighscore") === null) {
-  document.getElementById("awhighscore").innerHTML = "High Score: 0";
+  document.getElementById("highscore").innerHTML = "High Score: 0";
 } else {
   document.getElementById("awhighscore").innerHTML =
     "High Score: " + localStorage.getItem("awhighscore");
