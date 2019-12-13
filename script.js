@@ -69,6 +69,7 @@ for (i=0; i < gbtns.length; i++) {
 quit.addEventListener("click", quitGame)
 
 //Functions for Game Buttons
+//resets board
 function reset() {
     level = 1
     score = 0
@@ -78,6 +79,7 @@ function reset() {
     simonsays=[]
 }
 
+//generates simonsays array for game + calls flashes for buttons (see function below)
 function generateSimon() {
     while (simonsays.length < level)   {
         simonsays.push(buttons[Math.floor(Math.random() * (drpdwn.value*drpdwn.value))])
@@ -88,10 +90,11 @@ function generateSimon() {
     }
 }
 
+//if the dropdown is used, generates the new boards
 function generateBoard(evt) {
     while (gameboard.firstChild) {
           gameboard.removeChild(gameboard.firstChild);
-        }
+    }
 
         gameboard.style.gridTemplateColumns = `repeat(${drpdwn.value}, 1fr)`
         gameboard.style.gridTemplateRows = `repeat(${drpdwn.value}, 1fr)`
@@ -112,6 +115,7 @@ function generateBoard(evt) {
     }
  }
 
+ //flashes simon buttons
 function flashSimon(j) {
     gbtns = document.querySelectorAll(".gamebutton")
     
@@ -133,6 +137,7 @@ function flashSimon(j) {
     }, 1000 * j)
 }
 
+//creates an array of user inputs
 function user(evt) {
         usersays.push(evt.target.id)
         console.log(usersays)
@@ -143,6 +148,7 @@ function user(evt) {
         }, 500)
 }
 
+//ends the game immediately
 function quitGame(evt) {
     gameOver.style.display = 'block';
     finalScore.innerHTML= "Your score for this game was: " + score
@@ -181,6 +187,7 @@ let highScore = 0
 gameboard.addEventListener("click", checkScore)
 
 //Function for Win States
+//win condition + game over condition
 function checkScore(evt) {
     if (usersays.length === simonsays.length) {
         
@@ -220,6 +227,7 @@ function checkScore(evt) {
     }
 }
 
+//compares arrays after each round
 function checkArrays() {
     counter = 0
 
