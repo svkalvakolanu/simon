@@ -20,13 +20,12 @@ function buildColorArray(num) {
 
     functionArray = [color1, color2, color3];
 
-    console.log(functionArray);
     colorSet = shuff(functionArray);
-
-    console.log(colorSet);
 
     colors.push(colorSet);
   }
+
+  return colors
 }
 
 function shuff(arr) {
@@ -49,4 +48,4 @@ function shuff(arr) {
   return arr;
 }
 
-buildColorArray(100);
+console.log(buildColorArray(100))
