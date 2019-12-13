@@ -3,7 +3,7 @@
 Simon is an electronic game of memory skill invented by Ralph H. Baer and Howard J. Morrison. The device creates a series of tones and lights and requires a user to repeat the sequence. If the user succeeds, the series becomes progressively longer and more complex. Once the user fails or the time limit runs out, the game is over. The original version was manufactured and distributed by Milton Bradley in 1978 and later by Hasbro after it took over Milton Bradley. This is a digital recreation/adaptation of that game. There are also some other spin-off games that take cues from the simon game. 
 
 # Build status
-Current Build: 5.2
+Current Build: 5.3
 
 Edit History:
 1.0 - Working Basic Simon Game
@@ -12,7 +12,8 @@ Edit History:
 4.0 - Reaction Time Spin-off Added.
 5.0 - Spatial Awareness Game Added
 5.1 - CSS fixes
-5.2 Scoring Fixes
+5.2 - Scoring Fixes
+5.3 - color generator algo snip built
 
 # Languages Used:
 HTML, CSS, Vanilla JS (DOM Manips + Functions) 
