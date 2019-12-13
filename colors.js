@@ -10,6 +10,8 @@ let color2 = Math.floor(Math.random() * 221);
 let color3 = Math.floor(Math.random() * 221);
 
 function buildColorArray(num) {
+  colors = [];
+
   for (i = 0; i < num; i++) {
     colorSet = [];
     color1 = Math.floor(Math.random() * 256);
@@ -28,12 +30,12 @@ function buildColorArray(num) {
 }
 
 function shuff(arr) {
-  let idx = arr.length,
-    hold,
-    ridx;
+  let idx = arr.length;
+  let hold;
+  let ridx;
 
   // While there remain elements to shuffle...
-  while (0 !== idx) {
+  while (idx) {
     // Pick a remaining element...
     ridx = Math.floor(Math.random() * idx);
     idx -= 1;
@@ -46,3 +48,5 @@ function shuff(arr) {
 
   return arr;
 }
+
+buildColorArray(100);
