@@ -1,5 +1,4 @@
 # Simon Memory Game
-
 Simon is an electronic game of memory skill invented by Ralph H. Baer and Howard J. Morrison. The device creates a series of tones and lights and requires a user to repeat the sequence. If the user succeeds, the series becomes progressively longer and more complex. Once the user fails or the time limit runs out, the game is over. The original version was manufactured and distributed by Milton Bradley in 1978 and later by Hasbro after it took over Milton Bradley. This is a digital recreation/adaptation of that game. There are also some other spin-off games that take cues from the simon game. 
 
 # Build status
