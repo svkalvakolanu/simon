@@ -15,7 +15,7 @@ h2 {
   max-width: 500px;
   margin: auto;
   font-family: "Overpass", sans-serif;
-  color: #ffb400;
+  color: #7fb800;
 }
 
 html,
@@ -55,8 +55,24 @@ body {
 }
 
 .modal-buttons {
+  display: block;
   padding: 14px 18px;
   background-color: #c33c54;
+  margin: 10px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  color: white;
+  font-family: Raleway;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#turnindicator {
+  padding: 14px 18px;
+  background-color: black;
   border: none;
   outline: none;
   border-radius: 3px;
@@ -92,8 +108,8 @@ body {
   max-height: 630px;
   margin: 15px auto;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   background-color: white;
   border: 5px solid black;
   padding: 5px;
@@ -101,6 +117,11 @@ body {
 
 #openmodal {
   margin: 0 auto;
+}
+
+#turnindicator {
+  float: right;
+  cursor: default;
 }
 
 #quitgame {
@@ -129,8 +150,52 @@ body {
   cursor: pointer;
 }
 
+#one {
+  background: red;
+}
+
+#two {
+  background: hotpink;
+}
+
+#three {
+  background: purple;
+}
+
+#four {
+  background: slategray;
+}
+
+#five {
+  background: green;
+}
+
+#six {
+  background: darkorange;
+}
+
+#seven {
+  background: blue;
+}
+
+#eight {
+  background: violet;
+}
+
+#nine {
+  background: maroon;
+}
+
+#turnIndicator {
+  float: right;
+}
+
 .opacity {
-  opacity: 0.5;
+  background: black;
+}
+
+.full {
+  opacity: 1;
 }
 
 .startquit {
@@ -173,13 +238,4 @@ a {
   position: relative;
   display: block;
   float: right;
-}
-
-#one {
-  background: #7fb800;
-}
-
-.game2 {
-  background: white;
-  border: none;
 }
